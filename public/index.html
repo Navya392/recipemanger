@@ -292,24 +292,54 @@ footer {
         }
 
         /* Responsive Education Section */
-        @media (max-width: 768px) {
-            .educations-grid {
-                display: block;
-            }
-            .education {
-                margin-bottom: 20px;
-            }
-        }
+    @media (max-width: 768px) {
+    .educations-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .education {
+        display: grid;
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+
+    .education img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto 15px;
+        float: none; 
+    }
+
+    .education ul {
+        margin: 0; 
+        text-align: justify;
+    }
+
+    .education h4 {
+        text-align: center; 
+    }
+}
+
 
         /* Responsive Experience Section */
         @media (max-width: 768px) {
-            .experience-grid {
-                display: block;
-            }
-            .experience {
-                margin-bottom: 20px;
-            }
-        }
+    .experience {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; 
+        text-align: center; 
+    }
+
+    .experience img {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 15px; 
+    }
+
+    .experience-details {
+        text-align: justify; 
+    }
+}
 
         /* Responsive Content Section */
         @media (max-width: 768px) {
