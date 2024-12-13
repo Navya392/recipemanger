@@ -3,302 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavyaPortfolio</title>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <title>Navya_Portfolio</title>
     <style>
-        
-body{
-    font-family: Arial, sans-serif;
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-nav.navbar{
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #030229;
+    padding: 20px;
+}
+#navbar {
+    background-color: #080454;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.nav-grid {
     display: grid;
-    background-color: rgb(6, 6, 126);
-    padding:30px;
-    border: 5px solid white;
-    grid-template-columns: repeat(7,1fr);
-    grid-template-rows: 1fr;
-    gap:15px;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
     text-align: center;
 }
-nav a{
+
+.nav-grid li {
+    display: inline-block;
+}
+
+.nav-grid a {
+    color: rgb(252, 247, 247);
     text-decoration: none;
-    color: white;
-    margin-bottom: 20px;
+    padding: 10px 20px;
+    display: block;
+    font-size: 1.1em;
 }
-nav #home {
-    float:left;
-    margin-right: 30%;
-    margin-left: 0%;
-    overflow: hidden;
-}
-nav a:hover {
-    background-color: white;
+
+.nav-grid a:hover {
+    background-color: #cde1e8;
     color: black;
 }
-.navbar a.icon { 
-    float: right; 
-    display: none; 
-} 
-
- .navbar .responsive a.icon { 
-    position: absolute; 
-    right: 0; 
-    top: 0; 
-} 
-
-.navbar.responsive a { 
-    float: none; 
-    display: block; 
-    text-align: left; 
-}  
-
-.myimage {
-    float: left;
-    width: 30%;
-
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px; 
+    align-items: center; 
+    border: 2px solid #ccc;
+    background-color: #e4eef2;
+    padding: 20px;
+    margin-bottom: 30px;
 }
-.aboutmetext {
-    width: 70%;
-    text-align: justify;
-    float: right;
-    font: 18px;
+.profile-section {
+    text-align: center; 
 }
-.aboutmetext h1{
-    text-align: center;
+.profile-section img {
+    width: 60%;
+    border-radius: 8%;
 }
-.myimage img {
-    width: 90%;
-    height: 300px;
-
-}
-.myimage h2,h4{
-    margin: 0;
-    margin-left: 20%;
-
-}
-.myimage h3{
-    margin-left: 0%;
-}
-#about {
-    border: 1px solid rgb(14, 13, 13);
-    margin-top: 1%;
-    padding: 2%;
-    overflow: hidden;
-    background-color: rgb(243, 248, 249);
-}
-#projects {
-    width: 100%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-.project1 ,.project2 {
-    float:left;
-    width: 48%;
-    height:600px;
-    border: 1px solid rgb(8, 8, 8);
-    margin-left: 0%;
-    margin-right: 2%;
-    box-sizing: border-box;
-    background-color: rgb(235, 241, 241);;
-}
-.project2{
-    margin-right: 0%;
-    float: right;
-}
-#projects img{
-    width: 50%;
-    height: 30%;
-    margin-left: 25%;
-    margin-top: 10px;
-    text-align: center;
-}
-#projects::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-#projects p{
-    margin : 4%;
-    font-size: 18px;
-    text-align: justify;
-}
-#projects h1{
-    text-align: center;
-    background-color: rgb(19, 7, 126);
-    height: 40px;
-    color: white;
-}
-.experienceimg{
-    border: 1px solid rgb(11, 11, 11);
-    margin-top: 1%;
-    padding: 2%;
-    overflow: hidden;
-    background-color: rgb(238, 246, 247);
-}
-.experiencetext {
-    width: 70%;
-    text-align: justify;
-    float: right;
-    font-size: 18px;
-}
-#experience h1{
-    text-align: center;
-    background-color: rgb(19, 7, 126);
-    height: 40px;
-    color: white;   
-}
-.Experience {
-    float: left;
-    width: 30%;
-}
-.Experience img{
-    width: 80%;
+.profile-section h2 , h4{
     margin-top: 3%;
 }
-.ul{
-    font-size: 18px;
-    text-align: justify;
-    margin-right: 4%;
-}
-.edu{
-    border: 1px solid rgb(6, 6, 6);
-    margin-top: 1%;
-    padding: 2%;
-    overflow: hidden;
-    background-color: rgb(240, 246, 247);
-    height: 500px;
-}
-.educationtext {
-    width: 90%;
-    text-align: justify;
-    float: right;
-    font-size: 18px;
-}
-.educationtext h3 {
-    margin-left: 4%;
-}
-#education h1{
-    text-align: center;
-    background-color: rgb(19, 7, 126);
-    height: 40px;
-    color: white;   
-}
-.Education img{
-    float: left;
-    width: 10%;
-    margin-top: 2%;
-}
-.mrecwimg img {
-    float: left;
-    width: 10%;
-    height:35%;
-    margin-top: 4%;
-}
-.mrecwtext {
-    width: 90%;
-    text-align: justify;
-    float: right;
-    font-size: 18px;
-    margin-top: 1%;
-}
-.mrecwtext h3 {
-    margin-left: 4%;
-}
-.gptimg img {
-    float: left;
-    width: 10%;
-    height:35%;
-    margin-top: 5%;
-}
-.gpttext {
-    width: 90%;
-    text-align: justify;
-    float: right;
-    font-size: 18px;
-    margin-top: 1%;
-}
-.gpttext h3 {
-    margin-left: 4%;
-}
-#blogs{
-    width: 48%; 
-    float: left; 
-    box-sizing: border-box; 
-
-}
-#acheivements {
-    width: 48%; 
-    float: right; 
-    box-sizing: border-box; 
-
-}
-
-
-#blogs h1{
-    background-color: rgb(19, 7, 126);
-    text-align: center;
-    color: white;
-
-}
-#acheivements h1{
-    background-color: rgb(19, 7, 126);
-    text-align: center;
-    color: white;
-}
-
-
-.blogsimg, .acheivementsimg {
-    padding: 15px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-    text-align: center;
-    height: 450px;
-}
-
-
-footer {
-    text-align: center;
-    margin-top: 47%;
-
-}
-footer a {
-    text-decoration: none;
+#aboutme {
     padding: 10px;
 }
- 
-footer img {
-    width: 24px;
-    height: 24px;
+#aboutme h1 {
+    color: #040404;
+    text-align: center;
+    padding: 2%;
 }
+#aboutme p {
+    font-size: 1.1em;
+    color: black;
+    text-align: justify;
+}
+/* Projects Section */
+#projects h1{
+    margin-top: 30px;
+    text-align: center;
+    background-color: #080454;
+    padding: 10px 0;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+.project h2{
+    text-align: center;
+}
+.project p{
+    text-align: justify;
+    padding: 20px;
+}
+.project img {
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    border-radius: 8px;
+    max-height: 150px;
+}
+#educations h1{
+    margin-top: 30px;
+    text-align: center;
+    background-color: #080454;
+    padding: 10px 0;
+    color: white;
+}
+.educations-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    background-color:#e2eff4;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: justify;
+}
+.education h4{
+    margin-bottom: 2%;
+    text-align: center;
+    background-color: rgb(103, 172, 229);
+    padding: 5px 0;
+}
+.education img {
+    float: left;
+    margin-left: 4%;
+    width: 12%;
+    border-radius: 8px;
+    height:50%;
+}
+.education ul {
+    margin-left: 20%;
+    margin-top: 2%;
+}
+#experience h1 {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #080454;
+    padding: 10px 0;
+    color: white;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 15px;
+
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    align-items: center;
+}
+
+.experience img {
+    width: 80%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.experience-details h2 {
+    margin-bottom: 10px;
+    color: #080454;
+}
+
+.experience-details p {
+    text-align: justify;
+    font-size: 1.1em;
+}
+#content {
+    margin-top: 30px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.blogs-column, .achievements-column {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    background-color: #dee9ed;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.blog, .achievement {
+    margin-bottom: 20px;
+    
+}
+
+.blogs-column h1, .achievements-column h1 {
+    text-align: center;
+    background-color: #080454;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.blog img, .achievement img {
+    width: 30%;
+    height: 30%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: 37%;
+}
+
+.blog h2, .achievement h2 {
+    
+    color: #080454;
+    padding: 1px;
+}
+
+.blog p, .achievement p {
+    text-align: justify;
+    font-size: 1.1em;
+    padding: 20px;
+}
+
+footer {
+    display: grid;
+    background-color: #080454;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    margin-bottom: 2%;
+}
+
+@media (max-width: 768px) {
+            #navbar {
+                display: block;
+            }
+            .nav-grid {
+                display: block;
+                text-align: center;
+            }
+            .nav-grid  {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Responsive Container */
+        @media (max-width: 768px) {
+            .container {
+                display: block;
+                text-align: center;
+            }
+            .profile-section {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Responsive Projects Section */
+        @media (max-width: 768px) {
+            .projects-grid {
+                display: block;
+            }
+            .project {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Responsive Education Section */
+        @media (max-width: 768px) {
+            .educations-grid {
+                display: block;
+            }
+            .education {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Responsive Experience Section */
+        @media (max-width: 768px) {
+            .experience-grid {
+                display: block;
+            }
+            .experience {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Responsive Content Section */
+        @media (max-width: 768px) {
+            .content-grid {
+                display: block;
+            }
+            .blogs-column, .achievements-column {
+                margin-bottom: 20px;
+            }
+        }
+       
+        @media screen and (max-width: 900px) { 
+            #navbar a{
+                display: none;
+                padding: 10px;
+            } 
+            #navbar a.icon { 
+                display: block; 
+                padding: 20px;
+                top:6px;
+                position: absolute;
+            } 
+            #navbar {
+                display: block !important;
+            }
+        
+
+            #navbar.responsive {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            #navbar.responsive a.icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin:3%;
+            }
+            #navbar.responsive a {
+            display: block;
+            text-align: left;
+            padding: 10px;
+            }
+    } 
+
+@media screen and (min-width: 901px) {
+    #navbar a.icon{
+        display: none;
+    }
+}
+   
+
+
     </style>
 </head>
+
+
 <body>
-    <header>
-        <nav class="navbar" id="myNav">
-            <a href="#blogs">Blogs</a> 
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#acheivements">Acheivements</a>
-            <a href="#about">About</a>
-            <a id="home" href="#">Home</a>  
-            <a href="javascript:void(0);" class="icon" onclick="myFunc()"> 
+    <nav id="navbar">
+        <div class="nav-grid">
+            <a href="#home">Home</a></li>
+            <a href="#aboutme">About Me</a></li>
+            <a href="#projects">Projects</a></li>
+            <a href="#educations">Education</a></li>
+            <a href="#experience">Experience</a></li>
+            <a href="#blogs">Blogs</a></li>
+            <a href="#achievements">Achievements</a></li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
                 <i class="fas fa-bars"></i> 
             </a>
-        </nav>
-    </header>
-    <section id="about">
-        <div class="myimage">
-        <img src="https://tse1.mm.bing.net/th?id=OIP.L9B1n8lj7aocldq2QeKEtgHaHa&pid=Api&P=0&h=220" alt="profile picture">
-        <h2>Navya Gundoju</h2>
-        <h4>Graduate Student(UNH)</h4>
         </div>
-        <div class="aboutmetext">
-        <h1>About Me</h1>
+    </nav>
+    
+    <header id="home">
+        <div class="container">
+            <div class="profile-section">
+                <img src="images/myimage.jpg" alt="profile picture">
+                <h2>Navya Gundoju</h2>
+                <h4>Graduate Student(UNH)</h4>
+            </div>
+            <div id="aboutme">
+                <h1>About Me</h1>
         <p>I am pursuing masters in computer science in University of New Haven.Innovative and results-driven CS (MS) Graduate with 3+ years of experience as a Programmer & in full-stack web
             development. <br>Proficient in multiple programming languages, including Java, Python, and JavaScript,with a strong emphasison
             clean code and efficient problem-solving with willingness to pursue a challenging career in Software Development domainwith
             a progressive organization where I can put my technical and Interpersonal skills & knowledge to practice. <br>Able to Learn NewTechnologies quickly. 
             <br>Have Experience in Handling Clouds and Knowledge on Virtualization such as VMWare </p>
+           <br>
+            <!-- <p>--------------------------------------------------------------------------------------------------------------------------------</p> -->
         <h3>My Skills</h3>
         <ul>
             <li>C & C++</li>
@@ -307,154 +406,132 @@ footer img {
             <li>Java</li>
             <li>SQL & MySQL</li>
         </ul>
+            </div>
         </div>
-
-    </section>
+    </header>
+    <!-- Projects Section -->
     <section id="projects">
         <h1>Projects</h1>
-        <div class="project1">
-            <img src="https://businesszag.com/wp-content/uploads/2022/09/Smart-Solar-Monitoring-System-1-1170x844.png" alt="project picture">
-            <p>The main objective of this project is solar monitoring gives real-time visibility into the number
-                of KWH of electricity of solar panels are producing at any given moment in time. It makes certain solar
-                panels are working properly by tracking the power output of the system. <br> It can help to make more
-                awareness of the system. It offers information about energy consumption and generation, damages and
-                improving the energy generation by rotating the solar panels according to temperature.
-            </p>
-            <div class="ul">
-            <ul>
-                <li>So, Solar monitoring provides quick & easy ways to track by that we can save our money in energy cost.
+        <div class="projects-grid">
+            <div class="project">
+                <h2>IOT Based solar power monitoring system</h2>
+                <img src="images/project1.jpg" alt="Project 1">
+                <p>The main objective of this project is solar monitoring gives real-time visibility into the number
+                    of KWH of electricity of solar panels are producing at any given moment in time. It makes certain solar
+                    panels are working properly by tracking the power output of the system. <br> It can help to make more
+                    awareness of the system. It offers information about energy consumption and generation, damages and
+                    improving the energy generation by rotating the solar panels according to temperature.
+                    So, Solar monitoring provides quick & easy ways to track by that we can save our money in energy cost.
                     Implementing Renewable Energy technologies is one recommended way of reducing the environmental
-                    impact. Because of frequent power cut it is important to use renewable energy and monitoring it.</li>
-            </ul>
+                    impact. Because of frequent power cut it is important to use renewable energy and monitoring it.
+                </p>
+            </div>
+            <div class="project">
+                <h2>Maximum generation of power by rotating panels</h2>
+                <img src="images/project2.jpg" alt="Project 2">
+                <p> An extension to my project1 i have decided this IOT based node red analysis in this project2 Here We more analysis on the same project but used node-Red Dashboard flow and python programming to rotate 
+                    the solar panel according to the sun rises temperature from east to west and west to east. It can help to make more
+                    awareness of the system. It offers information about energy consumption and generation, damages and
+                    improving the energy generation by rotating the solar panels according to temperature.
+                    <br>
+                    By this we can get the maximum amount of power at the peak time of sun.
+                </p>
             </div>
         </div>
-        <div class="project2">
-            <img src="https://advcloudfiles.advantech.com/cms/e23cdaa0-c5b0-4bfa-b14e-ac9d9ae892f9/Content/content-image-1564386568380.jpg" alt="project picture">
-            <p> An extension to my project1 i have decided this IOT based node red analysis in this project2 Here We more analysis on the same project but used node-Red Dashboard flow and python programming to rotate 
-                the solar panel according to the sun rises temperature from east to west and west to east. It can help to make more
-                awareness of the system. It offers information about energy consumption and generation, damages and
-                improving the energy generation by rotating the solar panels according to temperature.
-                <br>
-                By this we can get the maximum amount of power at the peak time of sun.
-            </p>
-            <div class="ul">
-            <ul>
-                <li>
-                    It is most important to monitor our Solar setup in some manner. Without monitoring, it can be difficult
-to figure out if our Solar Panels are operating at their best. If a fault occurs then the solar monitoring
-system will point to the specific issue. So, that we can resolve the problem very quickly & efficiently.
-                </li>
-            </ul>
-            </div>
-        </div> 
     </section>
-    <section id="experience">
-        <h1>Experience</h1>
-    <div class="experienceimg">
-        <div class="Experience">
-        <img src="https://tse1.mm.bing.net/th?id=OIP.adUkiJOsDI_Vy02WcpJANAHaEC&pid=Api&P=0&h=220" alt="experience picture">
-        </div>
-        <div class="experiencetext">
-        <ul>
-            <li>I worked as a system administrator in DXC Technologies about 1.2 years mainly in HVD support, VMware related to
-                AT&T tele-commucation.</li>
-            <li>Maintenance and testing of virtual machines, Also learned about cloud</li>
-            <li>Had internship about 6 months when I was in my bachelors final years on VMware Technologies</li>
-            <li>Mainly contributed in developing the core code for the projects that I have worked on which were primarily done in
-                Python.</li>
-            <li>Excellent interpersonal and communication skills, the ability to provide solutions from a functional and technical
-                perspective, meet deadlines, quickly build client rapport and be a team player.</li>
-        </ul>
-        </div>
-    </div>
-    </section>
-
-    <section id="education">
-        <h1>Education</h1>
-        <div class="edu">
-    <div class="unhimg">
-        <div class="Education">
-        <img src="https://tse1.mm.bing.net/th?id=OIP.6kej8fSsFEUQ1_tN32MyhgHaGY&pid=Api&P=0&h=220" alt="picture">
-        </div>
-        <div class="educationtext">
-            <h3>Graduation</h3>
-            <ul>
-                <li>Pursuing Graduation with CGPA 3.9 out of 4 till 1st semester.</li>
-                <li>Received the Dean Scholarship worth 30% of Tuition Fee in 2023.
-                </li>
-                <li>Learned the courses like Operating Systems, AI , Computer networks and Data Communication etc</li>
-            </ul>
-        </div>
-    </div>
-    <div>
-    <div class="mrecwimg">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.h0gAQqDnfgFhK4rC4zZECAHaHa&pid=Api&P=0&h=220" alt="picture">
-    </div>
-    <div class="mrecwtext">
-        <h3>UnderGraduation</h3>
-        <ul>
-            <li>Graduated with overall CGPA of 9.2 out of 10.</li>
-            <li>Developed many Projects Such as IOT based solar power etc.</li>
-            <li>Stood out as the Academic 2019-2022 Batch Topper in the University.</li>
-            <li>Worked for an IT Firm in India during my penultimate and final years of education as an intern.</li>
-        </ul>
-    </div>
-    </div>
-    <div>
-        <div class="gptimg">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.YifFK5DUXnRTCJjByQup0gAAAA&pid=Api&P=0&h=220" alt="picture">
-        </div>
-        <div class="gpttext">
-            <h3>Diploma</h3>
-            <ul>
-                <li>Graduated with overall percentage of 92%.</li>
-                <li>Received Best Cadet Award 2017 from DG in National Cadet Corp.</li>
-                <li>Received a merit scholarship from NCC in 2018.</li>
-            </ul>
-        </div>
-        </div>
-        </div>
-    </section>
-    <section class="blogs-acheivements"></section>
-        <div id="blogs">
-            <h1>Blogs</h1>
-            <div class="blogsimg">
-                <h2>website Design creativity</h2>
-                <img src="https://tse1.mm.bing.net/th?id=OIP.Q1KVhBrDBWuJysLV3FytxgAAAA&pid=Api&P=0&h=220" alt="blogs picture">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus labore voluptate itaque eaque, adipisci animi cum consectetur incidunt. Voluptate labore possimus iste cumque autem animi atque odit saepe quas iure.</p>
-            </div>
-        </div>
-        <div id="acheivements">
-            <h1>Acheivements</h1>
-            <div class="acheivementsimg">
-                <h2>NCC Certification</h2>
-                <img src="https://tse3.mm.bing.net/th?id=OIP.RuF4cdMMMzypNcTH7i-BXwHaI3&pid=Api&P=0&h=220" alt="acheivements picture">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, at quas dolorem obcaecati itaque soluta quo maiores libero architecto consequatur? Veniam adipisci veritatis temporibus nesciunt mollitia corrupti voluptate officia quas.</p>
+    <section id="educations">
+        <h1>Education Details</h1>
+        <div class="educations-grid">
+            <div class="education">
+                <h4>Graduation</h4>
+                <img src="images/unh.jpg" alt="UNH">
                 <ul>
-                    <li>
-                        Received certification while pursuing masters and in bachelors with in computer programming skills.
-
+                    <li>Pursuing Graduation with CGPA 3.9 out of 4 till 1st semester.</li>
+                    <li>Received the Dean Scholarship worth 30% of Tuition Fee in 2023.
                     </li>
+                    <li>Learned the courses like Operating Systems, AI , Computer networks and Data Communication etc</li>
+                </ul>
+            </div>
+            <div class="education">
+                <h4>Undergraduation</h4>
+                <img src="images/mrecw.jpg" alt="MRECW">
+                <ul>
+                    <li>Graduated with overall CGPA of 9.2 out of 10.</li>
+                    <li>Developed many Projects Such as IOT based solar power etc.</li>
+                    <li>Stood out as the Academic 2019-2022 Batch Topper in the University.</li>
+                    <li>Worked for an IT Firm in India during my penultimate and final years of education as an intern.</li>
+                </ul>
+            </div>
+            <div class="education">
+                <h4>Diploma</h4>
+                <img src="images/gpt.jpg" alt="DIPLOMA">
+                <ul>
+                    <li>Graduated with overall percentage of 92%.</li>
+                    <li>Received Best Cadet Award 2017 from DG in National Cadet Corp.</li>
+                    <li>Received a merit scholarship from NCC in 2018.</li>
                 </ul>
             </div>
         </div>
     </section>
+    <section id="experience">
+        <h1>Experience</h1>
+        <div class="experience-grid">
+            <div class="experience">
+                <img src="images/experience.jpg" alt="Company 1">
+                <div class="experience-details">
+                    <ul>
+                        <li>I worked as a system administrator in DXC Technologies about 1.2 years mainly in HVD support, VMware related to
+                            AT&T tele-commucation.</li>
+                        <li>Maintenance and testing of virtual machines, Also learned about cloud</li>
+                        <li>Had internship about 6 months when I was in my bachelors final years on VMware Technologies</li>
+                        <li>Mainly contributed in developing the core code for the projects that I have worked on which were primarily done in
+                            Python.</li>
+                        <li>Excellent interpersonal and communication skills, the ability to provide solutions from a functional and technical
+                            perspective, meet deadlines, quickly build client rapport and be a team player.</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blogs">
+        <div class="content-grid">
+            <!-- Blogs Column -->
+            <div class="blogs-column">
+                <h1>Blogs</h1>
+                <div class="blog">
+                    <img src="images/blog.jpg" alt="Blog 1">
+                    <h2>My Journey into Web Development</h2>
+                    <p>Learn about how I transitioned into the field of web development, the challenges I faced, and the technologies I learned along the way.</p>
+                </div>
+            </div>
+    
+            <!-- Achievements Column -->
+            <div id = "achievements" class="achievements-column">
+                <h1>Achievements</h1>
+                <div class="achievement">
+                    <img src="images/ncc.jpg" alt="Achievement">
+                    <h2>NCC Certifications</h2>
+                    <p>Received senior certificates and Best cadet award from DG</p>
+                    <h2>Dean's Scholarship Award</h2>
+                    <p>Received the Dean's Scholarship for academic excellence and leadership in the field of computer science at the University of New Haven.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
-            <a href="https://www.messenger.com" ><img src="https://cdn4.iconfinder.com/data/icons/social-media-2285/1024/logo-512.png" alt="Messenger"> Messenger</a>
-            <a href="https://www.linkedin.com"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"> LinkedIn</a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Navya Gundoju. All Rights Reserved.</p>
+        </div>
     </footer>
     <script>
-        function myFunc() { 
-            let x = document.getElementById("myNav"); 
-            console.log(x.className)
-            if ( x.className === "navbar") { 
-                x.className += " responsive"; 
-            } else { 
-                x.className = "navbar"; 
-            } 
-        } 
-    </script>
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "nav-grid") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-grid";
+            }
+        }
+    </script>    
 </body>
 </html>
-
-
